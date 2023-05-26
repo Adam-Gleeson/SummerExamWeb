@@ -1,0 +1,25 @@
+<div>
+  <h1>Staff Details:</h1>
+  <h2>By: {{studentName}} {{studentNumber}}</h2>
+  <h3>{{apiLink}}</h3>
+  <div class="container">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between">
+        <div><strong>Name</strong></div>
+        <div><strong>Job Title</strong></div>
+        <div><strong>Country</strong></div>
+      </li>
+      <li *ngFor="let staff of results" class="list-group-item d-flex justify-content-between">
+        <div>
+          <p>{{ staff.firstname }} {{ staff.lastname }}</p>      
+        </div>
+        <div>
+          <p>{{ staff.country }}</p>
+        </div>
+        <div>
+          <p> {{ staff.jobtitle }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
